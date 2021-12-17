@@ -3,6 +3,8 @@
 A simple, single-page AJAX-based Twitter clone that uses HTML5, CSS3, and jQuery.
 
 ## Final Product
+!['Sreenshot of tweet compose box'](https://github.com/NickCoconut/tweeter/blob/master/docs/2021-12-16%2019.41.27.png?raw=true)
+!['Sreenshot of tweet'](https://github.com/NickCoconut/tweeter/blob/master/docs/2021-12-16%2019.42.23.png?raw=true)
 
 
 ## Getting Started
