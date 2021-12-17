@@ -5,25 +5,117 @@
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      type="text/css"
+    />
+    <!-- viewpoint -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <!-- Custom Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&family=Fuzzy+Bubbles&family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/header.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+    <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
+
+    <!-- font awesome -->
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+
+    <!-- icon -->
+    <script
+      src="https://kit.fontawesome.com/3b2ba9b01e.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- timeAgo -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+      integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
 
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <!-- App JS -->
+    <script src="/scripts/composer-char-counter.js"></script>
     <script type="text/javascript" src="/scripts/client.js"></script>
+    <script type="text/javascript" src="/scripts/writeTweet.js"></script>
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
-    <nav>
-      <span>tweeter</span>
+    <nav class="nav">
+      <div class="nav-title">
+        <div class="tweet"><span>tweeter</span></div>
+        <div class="writeTweet">
+          <strong>Write</strong> a new tweet <br />
+          <span class="arrowIcon"
+            ><i class="fas fa-angle-double-down"></i
+          ></span>
+        </div>
+      </div>
     </nav>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container"></main>
+    <div id="main-container">
+      <header class="header">
+        <div class="avatar">
+          <img src="/images/profile-hex.png" />
+        </div>
+
+        <div>
+          <h2 class="nickCoconut">NickCoconut</h2>
+        </div>
+      </header>
+
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="new-tweet">
+          <div class="errContainer">
+            <div class="alert">
+              <span><i class="fas fa-exclamation-circle"></i></span>
+              <span class="err"></span>
+              <span><i class="fas fa-exclamation-circle"></i></span>
+            </div>
+          </div>
+          <div class='slideDownBox'>
+          <h2 class="compose">Compose Tweet</h2>
+          <form method="POST" action="/tweets">
+            <label class="humming" for="tweet-text"
+              ><strong>What are you humming about?</strong></label
+            >
+            <textarea name="text" id="tweet-text"></textarea>
+            <div>
+              <button type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text"
+                >140</output
+              >
+            </div>
+            </div>
+          </form>
+
+          <div id="tweets-container"></div>
+        </section>
+      </main>
+    </div>
   </body>
 </html>

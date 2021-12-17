@@ -1,0 +1,15 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 120px;
+  height: 360px;
+  background-color: #bd5552;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+}
+
+.nickCoconut {
+  font-family: "Fuzzy Bubbles", cursive, sans-serif;
+  color: #ffffff;
+}

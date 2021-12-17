@@ -1,0 +1,56 @@
+.article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  margin-top: 60px;
+  padding: 2em;
+  height: 350px;
+  border: 3px solid black;
+  
+}
+
+.user {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 1em;
+}
+
+.tweet-content {
+  padding: 1em;
+  font-size: 26px;
+  font-family: 'Fuzzy Bubbles', cursive, sans-serif;
+}
+
+.tweet-content:hover {
+  text-shadow: 2px 2px 4px blue;
+}
+
+hr {
+  border: 2px solid black;
+  
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.date {
+  font-size: 20px;
+  margin-top: 0;
+}
+
+.flag:hover {
+  color: yellow;
+}
+
+.retweet:hover {
+  color: yellow;
+}
+
+.heart:hover {
+  color: yellow;
+}

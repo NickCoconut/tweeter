@@ -1,0 +1,45 @@
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 120px;
+  padding: 1.5em;
+  color:#FFFFFF;
+  background-color: #bd5552;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+ }
+
+ .nav-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ .tweet {
+    font-size: 35px;
+    font-family: 'Bungee', cursive, sans-serif;
+ }
+
+ .writeTweet {
+   text-align: center;
+   font-size: 20px;
+ }
+
+ .arrowIcon {
+   position: relative;
+   color: red;
+   align-self: flex-end;
+   animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+   0%   { top: 0px; }
+   50%  { top: 15px; }
+   100% { top: 0px; }
+} 
+ 
+
+ 
+
+
+ 
