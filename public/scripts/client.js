@@ -5,6 +5,7 @@
  */
 $(document).ready(function () {
   const renderTweets = function (tweets) {
+    $("#tweets-container").empty();
     for (let tweet of tweets) {
       const $newTweet = createTweetElement(tweet);
       $("#tweets-container").prepend($newTweet);
@@ -48,7 +49,20 @@ $(document).ready(function () {
     return $tweet;
   };
 
-  loadTweets();
+  function loadTweets() {
+    $.ajax({
+      url: "/tweets",
+      method: "GET",
+      dataType: "json",
+      success: (data) => {
+        renderTweets(data);
+      },
+      error: (err) => {
+        console.log(`error: ${err}`);
+      },
+    });
+  }
+
 
   $("form").submit(function (event) {
     event.preventDefault();
@@ -78,17 +92,7 @@ $(document).ready(function () {
     $(".counter").val(140);
   });
 
-  function loadTweets() {
-    $.ajax({
-      url: "/tweets",
-      method: "GET",
-      dataType: "json",
-      success: (data) => {
-        renderTweets(data);
-      },
-      error: (err) => {
-        console.log(`error: ${err}`);
-      },
-    });
-  }
+  loadTweets();
 });
+
+
