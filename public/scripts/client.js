@@ -73,10 +73,12 @@ $(document).ready(function () {
     if (tweetLength > max) {
       $(".errContainer").slideDown("slow");
       $(".err").text("Too Long. Please shorten your tweet");
+      return;
     } else if (tweetLength === 0) {
       $(".errContainer").slideDown("slow");
       $(".err").text("Please enter some tweet");
-    } else {
+      return;
+    } 
       $(".errContainer").slideUp("slow");
 
       $.ajax({
@@ -87,7 +89,7 @@ $(document).ready(function () {
           loadTweets();
         },
       });
-    }
+    
     $("#tweet-text").val("");
     $(".counter").val(140);
   });

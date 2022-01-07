@@ -10,6 +10,10 @@
   
 }
 
+.article:hover {
+  box-shadow: 10px 10px pink;
+}
+
 .user {
   display: flex;
   justify-content: space-between;
@@ -21,10 +25,6 @@
   padding: 1em;
   font-size: 26px;
   font-family: 'Fuzzy Bubbles', cursive, sans-serif;
-}
-
-.tweet-content:hover {
-  text-shadow: 2px 2px 4px blue;
 }
 
 hr {
